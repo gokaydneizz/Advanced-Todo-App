@@ -1,0 +1,240 @@
+/* font-family: 'Josefin Sans', sans-serif; wght : 400-700 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(235, 21%, 11%);
+  max-width: 1440px;
+
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 auto;
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 7rem;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -999;
+}
+
+/* Nav Create */
+
+.create-new {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.App .create-new .logo-dark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.logo-dark span {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+}
+
+.input-box {
+  width: 100%;
+  background-color: hsl(235, 24%, 19%);
+  padding: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  border-radius: 5px;
+}
+
+/* Checkbox Styles */
+
+.checkbox {
+  -webkit-appearance: none;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  background: #f8f7f7;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: hsl(235, 24%, 19%);
+  border: 1px solid hsl(233, 14%, 35%);
+  background-image: none;
+}
+
+.checkbox:checked {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.checkbox:checked:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  pointer-events: none;
+  background-image: url(images/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Input styles */
+
+.input {
+  border: none;
+  outline: none;
+  background-color: hsl(235, 24%, 19%);
+  font-size: 1.2rem;
+  color: hsl(234, 11%, 52%);
+  font-weight: 400;
+}
+
+/* Todos */
+
+.todos-box {
+  width: 100%;
+  background-color: hsl(235, 24%, 19%);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  border-radius: 7px;
+}
+
+.todos-box .label {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  background-color: hsl(235, 24%, 19%);
+  padding: 1.5em 1.2em;
+  border-bottom: 1px solid hsl(233, 14%, 35%);
+  width: 100%;
+}
+
+.todos-box .label:first-child {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.todos-box label {
+  font-weight: 400;
+  color: hsl(234, 39%, 85%);
+}
+
+/* last  */
+
+.select-menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: hsl(235, 24%, 19%);
+  font-size: 0.9rem;
+  padding: 1.2em;
+  font-weight: 700;
+  color: hsl(233, 14%, 35%);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.selects {
+  display: flex;
+  gap: 10px;
+}
+.select-menu span {
+  cursor: pointer;
+}
+
+.selected-item {
+  color: #496db5;
+}
+
+.lastSpan {
+  text-align: center;
+  margin-top: 100px;
+  color: hsl(233, 14%, 35%);
+  font-weight: 700;
+}
+
+/* If Statements */
+
+.completed-label {
+  text-decoration: line-through;
+}
+
+/* Light mode */
+
+.input-box.light {
+  background-color: #fff;
+}
+
+.input-box.light input {
+  background-color: #fff;
+}
+
+.todos-box.light {
+  background-color: #fff;
+}
+
+.todos-box.light label {
+  color: hsl(235, 19%, 35%);
+}
+
+.label.light {
+  background-color: #fff;
+  border-bottom: 1px solid hsl(233, 11%, 84%);
+}
+
+.select-menu.light {
+  background-color: #fff;
+  color: hsl(233, 11%, 84%);
+}
+
+.checkbox.light {
+  -webkit-appearance: none;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid hsl(236, 33%, 92%);
+  background-image: none;
+}
+
+.checkbox.light:checked {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+
+  .background-img {
+    width: 600px;
+    height: 200px;
+  }
+}
