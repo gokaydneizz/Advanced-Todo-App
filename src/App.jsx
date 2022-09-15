@@ -30,7 +30,7 @@ function App() {
       return;
     }
 
-    const items = Array.from(string);
+    const items = Array.from(todos);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
 
