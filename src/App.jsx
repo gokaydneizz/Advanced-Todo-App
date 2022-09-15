@@ -30,11 +30,18 @@ function App() {
       return;
     }
 
-    const items = Array.from(todos);
+    const items = Array.from(string);
     const [reorderedItem] = items.splice(result.source.index, 1);
     items.splice(result.destination.index, 0, reorderedItem);
-
-    setTodos(items);
+    if (string === activeTodos) {
+      setActiveTodos(items);
+    }
+    if (string === todos) {
+      setTodos(items);
+    }
+    if (string === completedTodos) {
+      setCompletedTodos(items);
+    }
   };
 
   const toggleTheme = () => {
